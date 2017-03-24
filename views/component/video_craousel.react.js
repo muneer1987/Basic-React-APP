@@ -24,28 +24,22 @@ getCraouselItem:function(){
 				    										
 },
 render:function(){
-		
+		var data = this.props.data;
 		return (
 
 				<Carousel activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect}>
-			        {
-			        	<div>
-				        	data.map(function(row){
+			        {data.map(function(row,key){
 							 console.log("asdasdsad ",row.id)       
 									
-									return (
-													<CarouselItem>
+									return (<CarouselItem>
 														<img width="150" height="150" alt="150x150" src={row.thumbnailUrl}/>
 														<div className="carousel-caption">
 															<p>{row.title}</p>
 														</div>
-													</CarouselItem>
-											) 
+													</CarouselItem>) 
 											
 							        
-							}.bind(this));
-			        	</div>
-
+							}.bind(this))
 			        }
 			    </Carousel>
 
