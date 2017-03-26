@@ -4,6 +4,8 @@
   "description": "Sample App : R&D work",
   "main": "app.js",
   "dependencies": {
+    "flux": "^3.1.2",
+    "http": "0.0.0",
     "react": "0.13.3",
     "react-bootstrap": "0.23.4",
     "react-dom": "0.14.6",
@@ -27,8 +29,6 @@
     "node": "6.10.x"
   },
   "scripts": {
-    "build": "browserify ./src/app.js | uglifyjs -cm > ./src/js/app.pre.prod.js && cat ./src/js/app.pre.prod.js > ./src/js/app.prod.js",
-    "build-with-babel": "browserify ./src/app.js -t babelify | uglifyjs -cm > ./src/js/app.prod.js",
     "quick": "watchify --iw GLOB   -o ./src/js/app.dev.js -v -d .",
     "start": "node server.js"
   },
