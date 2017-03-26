@@ -1,7 +1,8 @@
 # R-D-Work
 A Sample App
 
-Q:- How would you run this application?
+#Q:- How would you run this application?
+
 A:- As this application is built on single page application. So this application is requires some pre data to load.
 
 Step1:- Go to application root folder
@@ -20,7 +21,7 @@ check hosted server ip and make this in hosts file on server.
 
 127.0.0.1 my.sampleapp.com
 
-A developer on a VOD project that allows users to save the videos they want to watch later.
+#A developer on a VOD project that allows users to save the videos they want to watch later.
 
 1. Describe the data you would capture as part of this service.
 
