@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactBootstrap = require('react-bootstrap')
 import {Carousel,CarouselItem,CarouselCaption,Modal,ModalBody} from 'react-bootstrap';
-
+var VideoPlayback = require('./video_playback_modal.react');
 module.exports = React.createClass({
 
 getDefaultProps:function(){
@@ -24,7 +24,7 @@ getCraouselItem:function(){
 				    										
 },
 openModalBox:function(data,e){
-	debugger;
+	//debugger;
 	var session_data = JSON.parse(sessionStorage.getItem('video_data'));
 		session_data.map(function(row){
 
@@ -37,6 +37,7 @@ openModalBox:function(data,e){
 	this.setState({ showModal: true,PlayableVideo:data});
 },
 closeModalBox:function() {
+	//debugger
     this.setState({ showModal: false,PlayableVideo:{} });
   },
 render:function(){
@@ -48,11 +49,7 @@ render:function(){
 					{(this.state.showModal) ?
 							<Modal show={this.state.showModal} onRequestHide={this.closeModalBox} bsSize='large'>
 						         <div className='modal-body'>
-						            <h4>Text in a modal</h4>
-						            <video width={this.state.PlayableVideo.contents[0].width} height={this.state.PlayableVideo.contents[0].height} controls poster={this.state.PlayableVideo.images[0].src} onended={this.closeModalBox}>
-									  <source src={this.state.PlayableVideo.contents[0].url} type="video/mp4" />
-									  Your browser does not support HTML5 video.
-									</video>
+						            <VideoPlayback video_playback_data={this.state.PlayableVideo} closeModal = {this.closeModalBox}/>
 						          </div> 
 						     </Modal>
 						     : null
