@@ -49,7 +49,7 @@ render:function(){
 							<Modal show={this.state.showModal} onRequestHide={this.closeModalBox} bsSize='large'>
 						         <div className='modal-body'>
 						            <h4>Text in a modal</h4>
-						            <video width={this.state.PlayableVideo.contents[0].width} height={this.state.PlayableVideo.contents[0].height} controls poster={this.state.PlayableVideo.images[0].src}>
+						            <video width={this.state.PlayableVideo.contents[0].width} height={this.state.PlayableVideo.contents[0].height} controls poster={this.state.PlayableVideo.images[0].src} onended={this.closeModalBox}>
 									  <source src={this.state.PlayableVideo.contents[0].url} type="video/mp4" />
 									  Your browser does not support HTML5 video.
 									</video>
