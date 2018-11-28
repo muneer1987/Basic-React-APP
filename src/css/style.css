@@ -1,0 +1,38 @@
+body{
+	
+	margin:0 auto;
+}
+
+.left-home{
+	float:left;
+	margin-left:10px;
+}
+
+.right_history{
+	float:right !important;
+	margin-right:10px;
+}
+.top_background{
+
+	background-color: #0f0f0f;
+	background-size: 100% 100%;
+}
+.my_footer{
+
+	bottom:0px;
+	border-top: 2px solid #cfcfcf;
+
+}
+.my_footer_p{
+	text-align: center;
+	margin-top:20px;
+}
+.image_c{
+	height: 100px;
+	width:100px;
+	text-align: center;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img{
+
+	margin-left:350px;
+}
